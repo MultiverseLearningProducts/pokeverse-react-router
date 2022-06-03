@@ -23,6 +23,10 @@ Pokemon Wiki
   ```sh
   npm run test
   ```
+- Lint `.js` and `.jsx` files
+  ```sh
+  npm run lint
+  ```
 
 ---
 
