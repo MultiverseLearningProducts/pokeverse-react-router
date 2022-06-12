@@ -1,18 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Navigation } from './components/Navigation';
-import { PokemonCard } from './components/PokemonCard';
+import { Home } from './routes';
 
 const LIMIT = 150;
 const pokeApi = `https://pokeapi.co/api/v2/pokemon/?limit=${LIMIT}`;
-
 function App() {
+  const [pokemonList, setPokemonList] = useState([]);
+
+  useEffect(() => {
+    fetch(pokeApi)
+      .then((res) => res.json())
+      .then((data) => {
+        setPokemonList(data.results);
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }, []);
 
   return (
-    <div data-testid="app">
+    <div data-testid='app'>
       <Navigation />
 
-      <h1>Pokemon should appear here</h1>
-      <PokemonCard />
+      <Home pokemonList={pokemonList} />
     </div>
   );
 }
