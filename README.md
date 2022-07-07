@@ -4,7 +4,7 @@ Pokemon Wiki
 
 ## Built With
 - ⚛️  [React](https://reactjs.org/)
-- 📦  [Parel](https://parceljs.org/)
+- 📦  [Parcel](https://parceljs.org/)
 - 🧪  [Jest](https://jestjs.io/)
 - 🧪⚛️  [Testing Library / React](https://testing-library.com/docs/react-testing-library/setup)
 - 🐱 [PokeApi](https://pokeapi.co/)
